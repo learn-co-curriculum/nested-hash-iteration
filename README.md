@@ -23,6 +23,7 @@ contacts = {
     name: "Jon",
     email: "jon_snow@thewall.we", 
     favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
+		knows: nil
   },
   "Freddy Mercury" => {
     name: "Freddy",
