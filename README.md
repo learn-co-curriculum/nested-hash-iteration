@@ -42,7 +42,7 @@ end
 
 This should return:
 
-```ruby
+```txt
 Jon Snow:
 { :name=>"Jon",
   :email=>"jon_snow@thewall.we",
@@ -63,14 +63,14 @@ describing them.
 
 Let's iterate over the second level of our `contacts` hash. In order to access
 the key/value pairs of the second tier (i.e. the name, email, and other data
-about each contact), we need to iterate *down into* that level. So, we pick up
+about each contact), we need to iterate _down into_ that level. So, we pick up
 where we left off with the previous iteration and we keep going:
 
 ```ruby
 contacts.each do |person, data|
   #at this level, "person" is Jon Snow or Freddy Mercury and "data" is a hash of
   #key/value pairs to iterate over the "data" hash, we can use the following line:
-  
+
   data.each do |attribute, value|
     puts "#{attribute}: #{value}"
   end
@@ -79,8 +79,7 @@ end
 
 That should output the following:
 
-```ruby
-
+```txt
 name: Jon
 email: jon_snow@thewall.we
 favorite_ice_cream_flavors: ["chocolate", "vanilla", "mint chip"]
@@ -89,11 +88,10 @@ knows: nil
 name: Freddy
 email: freddy@mercury.com
 favorite_ice_cream_flavors: ["strawberry", "cookie dough", "mint chip"]
-
 ```
 
-Let's take it one step further and print out *just the favorite ice cream
-flavors*. Once again, we'll need to iterate down into that level of the hash,
+Let's take it one step further and print out _just the favorite ice cream
+flavors_. Once again, we'll need to iterate down into that level of the hash,
 then we can access the favorite ice cream array and print out the flavors:
 
 ```ruby
@@ -101,7 +99,7 @@ contacts.each do |person, data|
   #at this level, "person" is Jon Snow or Freddy and "data" is a hash of
   #key/value pairs to iterate over the "data" hash, we can use the following
   #line:
-  
+
   data.each do |attribute, value|
     #at this level, "attribute" describes the key of :name, :email,
     #:favorite_ice_cream_flavors, or :knows we need to first check and see if
@@ -120,7 +118,7 @@ end
 
 This should output:
 
-```ruby
+```txt
 chocolate
 vanilla
 mint chip
